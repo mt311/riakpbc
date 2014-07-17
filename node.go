@@ -161,8 +161,8 @@ func (node *Node) Ping() bool {
 func (node *Node) Close() {
 	if node.conn != nil {
 		node.conn.Close()
-		node.conn = nil
 	}
+	node.conn = nil
 }
 
 func (node *Node) read() (respraw []byte, err error) {
